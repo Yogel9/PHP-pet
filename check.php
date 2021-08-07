@@ -10,7 +10,7 @@
   	    }	elseif (strlen($message)<10) {
             $error ='Укажите сообщение, содержащее больше 10 символов';
   	        }
-  	     
+
 
   	if($error!='')
   	{
@@ -18,7 +18,7 @@
   		exit;
   	}
  
- $subject ="=?utf-8?B?".base64_encode("Сообщение с сайта Антона :)")."?=";//заголовок сообщения
+ $subject ="=?utf-8?B?".base64_encode("Сообщение с сайта Антона")."?=";//заголовок сообщения
  $headers = "Form: $email\r\nReply-to: $email\r\n\Content-type: text/html;charset=utf-8\r\n";
  mail('homeleo9458@gmail.com',$subject,$message,$headers);//отправка сообщения
 
