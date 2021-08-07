@@ -18,21 +18,16 @@
           <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
         </form>
 
+        <?php if (isset($_COOKIE['user'])): ?>
             <div class="text-end">
-          <a class="btn btn-outline-light me-2" href="/authForm.php">Войти</a>
-            </div>
-
-<!--
-        <?php if (isset($_COOKIE['user']) &&($_COOKIE['user'] =='yes')): ?>
-            <div class="text-end">
-          <a class="btn btn-outline-light me-2" href="/auth.php">Кабинет пользователя</a>
+          <a class="btn btn-outline-light me-2" href="validation-form/cookie_del.php">Кабинет пользователя</a>
             </div>
         <?php else: ?>
             <div class="text-end">
-          <a class="btn btn-outline-light me-2" href="/auth.php">Войти</a>
+          <a class="btn btn-outline-light me-2" href="/authForm.php">Войти</a>
             </div>
         <?php endif; ?>
--->
+
 
       </div>
     </div>

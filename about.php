@@ -12,7 +12,7 @@
 
 <div class="container mt-5">
 <h3>Контактная форма</h3>
-<form action="check.php" method="post">
+<form action="validation-form/check.php" method="post">
   
  <input type="email" name="email" placeholder="Введите Email" class="form-control">
  <br>

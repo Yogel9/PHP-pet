@@ -1,17 +1,18 @@
 <?php
-	/*if(isset($_COOKIE['user']) && $_COOKIE['user']=='yes')
-	 setcookie('user','yes', time() - 3600, '/');//'.tmweb.ru'
-	else
-	 setcookie('user','yes',time() + 3600,'/');	
-
-    header('Location: /');//переадрисация*/
-  
-
+$mysql = new mysqli('localhost','root','','php_pit');//подключение к бд
 
  $login = filter_var(trim($_POST['login']),FILTER_SANITIZE_STRING);
  $password = filter_var(trim($_POST['password']),FILTER_SANITIZE_STRING);
  $name = filter_var(trim($_POST['name']),FILTER_SANITIZE_STRING);
   
+$result = $mysql->query("SELECT * FROM `users` WHERE `login`= '$login'");
+$user = $result->fetch_assoc();//перевод данных в привычный массив
+if (is_countable($user)== true || $user['login']==$login)
+{
+    echo "Данный логин уже занят";
+    exit();
+}
+
   if(mb_strlen ($login)<2 || mb_strlen($login)>100)
   {
 	echo "Недопустимая длина логина";
@@ -28,11 +29,10 @@
 
 $password = md5($password."salt");// создаем хэш
 
-$mysql = new mysqli('localhost','root','','php_pit');//подключение к бд
+
 $mysql->query("INSERT INTO `users`(`login`,`pass`,`name`) VALUES ('$login','$password','$name')");
 
 $mysql->close();
-
 header('Location: /');
 
 ?>
