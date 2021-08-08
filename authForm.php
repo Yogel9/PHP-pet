@@ -12,7 +12,7 @@
 	<input type="text" class="form-control" name="login" id="login" placeholder="Введите логин"><br>
 	<input type="text" class="form-control" name="password" id="pass" placeholder="Введите пароль"><br>
 	<button class="btn btn-success" type="submite">Войти</button>
-	<a class="btn" href="/regForm.php">Зарегистрироваться</a>
+	<a class="btn" href="/regForm.php">Регистрация</a>
  </form>
 
 

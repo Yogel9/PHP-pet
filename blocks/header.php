@@ -8,9 +8,9 @@
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a href="/" class="nav-link px-2 text-white">Главная</a></li>
+          <li><a href="/todoList.php" class="nav-link px-2 text-white">Список дел</a></li>
           <li><a href="/about.php" class="nav-link px-2 text-white">Контакты</a></li>
-          <!--<li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+          <!--<li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
           <li><a href="#" class="nav-link px-2 text-white">About</a></li>-->
         </ul>
 
@@ -24,7 +24,11 @@
             </div>
         <?php else: ?>
             <div class="text-end">
-          <a class="btn btn-outline-light me-2" href="/authForm.php">Войти</a>
+          <a class="btn btn-success me-2" role="button" href="/authForm.php">Войти</a>
+            </div>
+
+            <div class="text-end">
+          <a class="btn btn-outline-secondary me-2" role="button" href="/regForm.php">Регистрация</a>
             </div>
         <?php endif; ?>
 
