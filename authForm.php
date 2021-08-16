@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<title>Вход</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <?php require "blocks/header.php" ?>

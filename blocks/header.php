@@ -1,4 +1,4 @@
-<?php require "blocks/init.php" ?>
+<link rel="stylesheet" type="text/css" href="css/style.css"><?php require "blocks/init.php" ?>
 <header class="p-3 bg-dark text-white">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<title>Регистрация</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <?php require "blocks/header.php" ?>

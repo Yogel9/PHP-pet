@@ -6,3 +6,23 @@ form{
 	margin-left: 1%;
 width: 32%	;
 }
+
+.list {
+background-color: #EFF0F3!important}
+
+.list .container{
+margin-top: 50 px;
+width: 25%!important;
+}
+
+.list form{
+background: #229e6c;
+border:  10px solid #229e6c;
+border-radius: 10px;
+}
+
+.list #task{
+	width: 62%;
+	float: left;
+	margin-right: 7%;
+}
