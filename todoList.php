@@ -21,8 +21,17 @@
 
 
 <?php require 'validation-form/configDB.php';//подключаем бд
+if (isset($_COOKIE['user']))
+{
+  $login=$_COOKIE['user'];
+}else
+{
+  exit();
+}
 
-  $query = $pdo -> query('SELECT * FROM `tasks` ORDER BY `id` DESC'); 
+ $sql = 'SELECT * FROM `tasks`  WHERE `login`= ?';
+ $query = $pdo ->prepare($sql);//подготавливаем команду
+ $query->execute([$login]);
    while ($row= $query->fetch (PDO::FETCH_OBJ))://Извлекает следующую строку и возвращает её в виде объекта
 ?>
   <div class="list-group mt-1 col-lg-8 col-md-10 col-sm-12 col-xs-12 offset-lg-2 offset-md-1">
